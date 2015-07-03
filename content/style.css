@@ -1,6 +1,10 @@
 ﻿@import url('../fonts/CoolveticaRg-Regular.css');
 @import url('../fonts/LandSpeedRecord.css');
 
+.container {
+    max-width: 500px;
+}
+
 .card { 
     padding: 15px;
     border-radius: 15px;
