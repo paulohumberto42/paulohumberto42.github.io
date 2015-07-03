@@ -66,6 +66,21 @@
     font-family: 'LandSpeedRecord';
 }
 
+.card-number:before {
+    content: '#';
+}
+
+.card-number {
+    float: right;
+    font-size: 1.4em;
+    font-family: 'CoolveticaRg-Regular';
+    -webkit-transform: rotate(12deg);
+    -moz-transform: rotate(12deg);
+    -o-transform: rotate(12eg);
+    padding: 3px;
+
+}
+
 .spawn-manhole .spawn-flavor {
     background-image: url(../img/manhole.png);
     background-repeat:no-repeat;

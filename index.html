@@ -13,7 +13,7 @@
                 <option value="blue">Blue</option>
                 <option value="yellow">Yellow</option>
                 <option value="orange">Orange</option>
-                <option value="red">Red</option>
+                <option value="red">Red</optio>n
             </select>
             <button ng-click="deckCtrl.spawnCard()">Spawn</button>
             <button ng-click="deckCtrl.undo()">Undo</button>
@@ -26,6 +26,7 @@
                     <div class="row spawn spawn-{{spawn.dangerLevel}} spawn-{{spawn.spawn.type}}">
                         <div class="spawn-flavor">
                             <span class="h1">{{spawn.card.species}} {{spawn.spawn.type}}</span>                            
+                            <div class="card-number">{{spawn.card.number}}</div>
                         </div>
                         <div class="spawn-value" ng-class="{ 'spawn-extraactivation': spawn.spawn.extraActivation, 'spawn-x': spawn.spawn.value }">
                             <span class="h1">{{spawn.spawn.value}}</span>
