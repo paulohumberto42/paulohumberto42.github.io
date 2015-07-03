@@ -198,22 +198,22 @@
     background-position-x:right;
 }
 
+.spawn-value.spawn-extraactivation {
+    background-position-x:center;
+    background-position-y:bottom;
+    background-size: contain;
+}
+
 .spawn-walker .spawn-value.spawn-extraactivation {
     background-image: url(../img/zombies/extraactivation-walker.png);
-    background-position-x:center;
-    background-size: contain;
 }
 
 .spawn-runner .spawn-value.spawn-extraactivation {
     background-image: url(../img/zombies/extraactivation-runner.png);
-    background-position-x:center;
-    background-size: contain;
 }
 
 .spawn-fatty .spawn-value.spawn-extraactivation {
     background-image: url(../img/zombies/extraactivation-fatty.png);
-    background-position-x:center;
-    background-size: contain;
 }
 
 .spawn-x span::after {
