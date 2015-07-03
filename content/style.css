@@ -64,20 +64,23 @@
     width: 57%;
     background-color: #fff;
     font-family: 'LandSpeedRecord';
+    margin-bottom: 3px;
 }
 
-.card-number:before {
+.card-number::before {
     content: '#';
 }
 
 .card-number {
     float: right;
+
     font-size: 1.4em;
     font-family: 'CoolveticaRg-Regular';
     -webkit-transform: rotate(12deg);
     -moz-transform: rotate(12deg);
     -o-transform: rotate(12eg);
-    padding: 3px;
+    margin-top: 3px;
+    margin-right: 7px;
 
 }
 
