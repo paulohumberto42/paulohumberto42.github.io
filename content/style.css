@@ -175,3 +175,18 @@
     background-image: url(../img/zombies/skinner-crawler.png);
     background-position-x:right;
 }
+
+.card-vip .spawn-vip .spawn-value {
+    background-image: url(../img/zombies/vip.png);
+    background-position-x:right;
+}
+
+.card-crow .spawn-crow .spawn-value {
+    background-image: url(../img/zombies/crow.png);
+    background-position-x:right;
+}
+
+.card-lostzombivor .spawn-zombivor .spawn-value {
+    background-image: url(../img/zombies/zombivor.png);
+    background-position-x:right;
+}
