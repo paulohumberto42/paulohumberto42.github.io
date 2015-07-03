@@ -31,7 +31,7 @@
     background-color: #376aad;
 }
 
-.card-lostzombivor {
+.card-zombivor {
     background-color: #aa55a1;
 }
 
@@ -211,7 +211,7 @@
     background-position-x:right;
 }
 
-.card-lostzombivor .spawn-zombivor .spawn-value {
+.card-zombivor .spawn-zombivor .spawn-value {
     background-image: url(../img/zombies/zombivor.png);
     background-position-x:right;
 }
