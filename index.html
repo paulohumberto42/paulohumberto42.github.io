@@ -32,12 +32,12 @@
 
             <div class="row card card-{{spawn.card.species}}"
                  ng-repeat="spawn in deckCtrl.spawns | limitTo: 15"
-                 ng-class="{ 'spawn-manhole': spawn.card.manhole }">
+                 ng-class="{ 'spawn-manhole': spawn.card.manhole, 'spawn-green-bed': spawn.card.greenBed, 'spawn-blue-bed': spawn.card.blueBed }">
                 <div class="col-xs-12">
                     <div class="row spawn spawn-{{spawn.dangerLevel}} spawn-{{spawn.spawn.type}}">
                         <div class="spawn-flavor">
                             <div class="card-number"><span>{{spawn.card.number}}</span></div>
-                            <span class="h1">{{spawn.spawn.type}}</span>                            
+                            <span class="h1">{{spawn.spawn.type}}</span>
                         </div>
                         <div class="spawn-value" ng-class="{ 'spawn-extraactivation': spawn.spawn.extraActivation, 'spawn-x': spawn.spawn.value }">
                             <span class="h1">{{spawn.spawn.value}}</span>

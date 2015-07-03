@@ -95,6 +95,20 @@
     background-size:contain;
 }
 
+.spawn-blue-bed .spawn-flavor {
+    background-image: url(../img/blue-bed.png);
+    background-repeat:no-repeat;
+    background-position-x:right;
+    background-size:contain;
+}
+
+.spawn-green-bed .spawn-flavor {
+    background-image: url(../img/green-bed.png);
+    background-repeat:no-repeat;
+    background-position-x:right;
+    background-size:contain;
+}
+
 .spawn-value {
     float: left;
     width: 43%;
