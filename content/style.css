@@ -76,9 +76,16 @@
 .spawn-value {
     float: left;
     width: 43%;
-    font-family: 'CoolveticaRg-Regular';
     background-repeat:no-repeat;
     background-size:contain;
+}
+
+.spawn-value span {
+    color: #fff;
+    font-family: 'CoolveticaRg-Regular';
+    line-height: 125px;
+    margin-left: 10px;
+    font-size: 5em;
 }
 
 .card-standard .spawn-walker .spawn-value {
@@ -189,4 +196,22 @@
 .card-lostzombivor .spawn-zombivor .spawn-value {
     background-image: url(../img/zombies/zombivor.png);
     background-position-x:right;
+}
+
+.spawn-walker .spawn-value.spawn-extraactivation {
+    background-image: url(../img/zombies/extraactivation-walker.png);
+    background-position-x:center;
+    background-size: contain;
+}
+
+.spawn-runner .spawn-value.spawn-extraactivation {
+    background-image: url(../img/zombies/extraactivation-runner.png);
+    background-position-x:center;
+    background-size: contain;
+}
+
+.spawn-fatty .spawn-value.spawn-extraactivation {
+    background-image: url(../img/zombies/extraactivation-fatty.png);
+    background-position-x:center;
+    background-size: contain;
 }

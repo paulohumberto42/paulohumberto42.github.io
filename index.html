@@ -27,8 +27,8 @@
                         <div class="spawn-flavor">
                             <span class="h1">{{spawn.card.species}} {{spawn.spawn.type}}</span>                            
                         </div>
-                        <div class="spawn-value">
-                            <strong class="h1">{{spawn.spawn.value}}</strong>
+                        <div class="spawn-value" ng-class="{ 'spawn-extraactivation': spawn.spawn.extraActivation }">
+                            <span class="h1">{{spawn.spawn.value}}</span>
                         </div>
                     </div>
                 </div>
