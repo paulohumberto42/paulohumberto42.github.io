@@ -199,9 +199,9 @@
 }
 
 .spawn-value.spawn-extraactivation {
-    background-position-x:center;
-    background-position-y:bottom;
-    background-size: contain;
+    background-position-x:center !important;
+    background-position-y:bottom !important;
+    background-size: contain !important;
 }
 
 .spawn-walker .spawn-value.spawn-extraactivation {
