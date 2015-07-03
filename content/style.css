@@ -215,3 +215,7 @@
     background-position-x:center;
     background-size: contain;
 }
+
+.spawn-x span::after {
+    content: 'x';
+}
