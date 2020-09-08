@@ -1,10 +1,10 @@
 {
-  "id": "teste3",
+  "id": "teste2",
   "pages": [
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/001.dat",
+      "url": "/data/comic/teste2/001.dat",
       "panels": [
         {
           "x": 0,
@@ -17,7 +17,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/002.dat",
+      "url": "/data/comic/teste2/002.dat",
       "panels": [
         {
           "x": 93,
@@ -42,7 +42,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/003.dat",
+      "url": "/data/comic/teste2/003.dat",
       "panels": [
         {
           "x": 83,
@@ -79,7 +79,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/004.dat",
+      "url": "/data/comic/teste2/004.dat",
       "panels": [
         {
           "x": 73,
@@ -122,7 +122,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/005.dat",
+      "url": "/data/comic/teste2/005.dat",
       "panels": [
         {
           "x": 95,
@@ -165,7 +165,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/006.dat",
+      "url": "/data/comic/teste2/006.dat",
       "panels": [
         {
           "x": 82,
@@ -208,7 +208,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/007.dat",
+      "url": "/data/comic/teste2/007.dat",
       "panels": [
         {
           "x": 90,
@@ -245,7 +245,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/008.dat",
+      "url": "/data/comic/teste2/008.dat",
       "panels": [
         {
           "x": 86,
@@ -288,7 +288,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/009.dat",
+      "url": "/data/comic/teste2/009.dat",
       "panels": [
         {
           "x": 115,
@@ -325,7 +325,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/010.dat",
+      "url": "/data/comic/teste2/010.dat",
       "panels": [
         {
           "x": 0,
@@ -338,7 +338,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/011.dat",
+      "url": "/data/comic/teste2/011.dat",
       "panels": [
         {
           "x": 0,
@@ -351,7 +351,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/012.dat",
+      "url": "/data/comic/teste2/012.dat",
       "panels": [
         {
           "x": 0,
@@ -364,7 +364,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/013.dat",
+      "url": "/data/comic/teste2/013.dat",
       "panels": [
         {
           "x": 0,
@@ -377,7 +377,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/014.dat",
+      "url": "/data/comic/teste2/014.dat",
       "panels": [
         {
           "x": 0,
@@ -390,7 +390,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/015.dat",
+      "url": "/data/comic/teste2/015.dat",
       "panels": [
         {
           "x": 0,
@@ -403,7 +403,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/016.dat",
+      "url": "/data/comic/teste2/016.dat",
       "panels": [
         {
           "x": 0,
@@ -416,7 +416,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/017.dat",
+      "url": "/data/comic/teste2/017.dat",
       "panels": [
         {
           "x": 0,
@@ -429,7 +429,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/018.dat",
+      "url": "/data/comic/teste2/018.dat",
       "panels": [
         {
           "x": 0,
@@ -442,7 +442,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/019.dat",
+      "url": "/data/comic/teste2/019.dat",
       "panels": [
         {
           "x": 0,
@@ -455,7 +455,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/020.dat",
+      "url": "/data/comic/teste2/020.dat",
       "panels": [
         {
           "x": 0,
@@ -468,7 +468,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/021.dat",
+      "url": "/data/comic/teste2/021.dat",
       "panels": [
         {
           "x": 0,
@@ -481,7 +481,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/022.dat",
+      "url": "/data/comic/teste2/022.dat",
       "panels": [
         {
           "x": 0,
@@ -494,7 +494,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/023.dat",
+      "url": "/data/comic/teste2/023.dat",
       "panels": [
         {
           "x": 0,
@@ -507,7 +507,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/024.dat",
+      "url": "/data/comic/teste2/024.dat",
       "panels": [
         {
           "x": 0,
@@ -520,7 +520,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/025.dat",
+      "url": "/data/comic/teste2/025.dat",
       "panels": [
         {
           "x": 0,
@@ -533,7 +533,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/026.dat",
+      "url": "/data/comic/teste2/026.dat",
       "panels": [
         {
           "x": 90,
@@ -594,7 +594,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/027.dat",
+      "url": "/data/comic/teste2/027.dat",
       "panels": [
         {
           "x": 83,
@@ -637,7 +637,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/028.dat",
+      "url": "/data/comic/teste2/028.dat",
       "panels": [
         {
           "x": 85,
@@ -674,7 +674,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/029.dat",
+      "url": "/data/comic/teste2/029.dat",
       "panels": [
         {
           "x": 0,
@@ -687,7 +687,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/030.dat",
+      "url": "/data/comic/teste2/030.dat",
       "panels": [
         {
           "x": 0,
@@ -700,7 +700,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/031.dat",
+      "url": "/data/comic/teste2/031.dat",
       "panels": [
         {
           "x": 0,
@@ -713,7 +713,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/032.dat",
+      "url": "/data/comic/teste2/032.dat",
       "panels": [
         {
           "x": 0,
@@ -726,7 +726,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/033.dat",
+      "url": "/data/comic/teste2/033.dat",
       "panels": [
         {
           "x": 0,
@@ -739,7 +739,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/034.dat",
+      "url": "/data/comic/teste2/034.dat",
       "panels": [
         {
           "x": 0,
@@ -752,7 +752,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/035.dat",
+      "url": "/data/comic/teste2/035.dat",
       "panels": [
         {
           "x": 0,
@@ -765,7 +765,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/036.dat",
+      "url": "/data/comic/teste2/036.dat",
       "panels": [
         {
           "x": 0,
@@ -778,7 +778,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/037.dat",
+      "url": "/data/comic/teste2/037.dat",
       "panels": [
         {
           "x": 0,
@@ -791,7 +791,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/038.dat",
+      "url": "/data/comic/teste2/038.dat",
       "panels": [
         {
           "x": 0,
@@ -804,7 +804,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/039.dat",
+      "url": "/data/comic/teste2/039.dat",
       "panels": [
         {
           "x": 0,
@@ -817,7 +817,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/040.dat",
+      "url": "/data/comic/teste2/040.dat",
       "panels": [
         {
           "x": 0,
@@ -830,7 +830,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/041.dat",
+      "url": "/data/comic/teste2/041.dat",
       "panels": [
         {
           "x": 0,
@@ -843,7 +843,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/042.dat",
+      "url": "/data/comic/teste2/042.dat",
       "panels": [
         {
           "x": 0,
@@ -856,7 +856,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/043.dat",
+      "url": "/data/comic/teste2/043.dat",
       "panels": [
         {
           "x": 0,
@@ -869,7 +869,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/044.dat",
+      "url": "/data/comic/teste2/044.dat",
       "panels": [
         {
           "x": 0,
@@ -882,7 +882,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/045.dat",
+      "url": "/data/comic/teste2/045.dat",
       "panels": [
         {
           "x": 0,
@@ -895,7 +895,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/046.dat",
+      "url": "/data/comic/teste2/046.dat",
       "panels": [
         {
           "x": 0,
@@ -908,7 +908,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/047.dat",
+      "url": "/data/comic/teste2/047.dat",
       "panels": [
         {
           "x": 0,
@@ -921,7 +921,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/048.dat",
+      "url": "/data/comic/teste2/048.dat",
       "panels": [
         {
           "x": 0,
@@ -934,7 +934,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/049.dat",
+      "url": "/data/comic/teste2/049.dat",
       "panels": [
         {
           "x": 0,
@@ -947,7 +947,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/050.dat",
+      "url": "/data/comic/teste2/050.dat",
       "panels": [
         {
           "x": 0,
@@ -960,7 +960,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/051.dat",
+      "url": "/data/comic/teste2/051.dat",
       "panels": [
         {
           "x": 0,
@@ -973,7 +973,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/052.dat",
+      "url": "/data/comic/teste2/052.dat",
       "panels": [
         {
           "x": 0,
@@ -986,7 +986,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/053.dat",
+      "url": "/data/comic/teste2/053.dat",
       "panels": [
         {
           "x": 0,
@@ -999,7 +999,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/054.dat",
+      "url": "/data/comic/teste2/054.dat",
       "panels": [
         {
           "x": 0,
@@ -1012,7 +1012,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/055.dat",
+      "url": "/data/comic/teste2/055.dat",
       "panels": [
         {
           "x": 0,
@@ -1025,7 +1025,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/056.dat",
+      "url": "/data/comic/teste2/056.dat",
       "panels": [
         {
           "x": 0,
@@ -1038,7 +1038,7 @@
     {
       "width": 1331,
       "height": 1868,
-      "url": "/data/comic/teste3/057.dat",
+      "url": "/data/comic/teste2/057.dat",
       "panels": [
         {
           "x": 0,
