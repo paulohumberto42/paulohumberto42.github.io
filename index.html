@@ -8,6 +8,34 @@
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 <script type="text/javascript">
+
+    class ValueMonitor {
+        value = null;
+        lastChangeAt = 0;
+        
+        update(newValue) {
+            if (this.value != newValue) {
+                this.value = newValue;
+                this.lastChangeAt = new Date().getTime();
+                return true;
+            }
+            
+            return false;
+        }
+        
+        hasValue() {
+            return this.value != null;
+        }
+        
+        age() {
+            return new Date().getTime() - this.lastChangeAt;
+        }
+        
+        status() {;
+            console.log("hasValue: " + this.hasValue() + " age: " + this.age());
+        }
+    }
+
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
@@ -15,6 +43,8 @@
     const URL = "./my_model/";
 
     let model, webcam, cardImage, debugContainer;
+    
+    let valueMonitor = new ValueMonitor();
 
     // Load the image model and setup the webcam
     async function init() {
@@ -28,11 +58,11 @@
         model = await tmImage.load(modelURL, metadataURL);
 
         // Convenience function to setup a webcam
-        // webcam = new tmImage.Webcam(200, 200, true); // width, height, flip
-        // await webcam.setup(); // request access to the webcam
+        webcam = new tmImage.Webcam(200, 200, true); // width, height, flip
+        await webcam.setup(); // request access to the webcam
         
-        webcam = new tmImage.Webcam(200, 200, false); // width, height, flip
-        await webcam.setup({ facingMode: "environment" })
+        //webcam = new tmImage.Webcam(200, 200, false); // width, height, flip
+        //await webcam.setup({ facingMode: "environment" })
         
         await webcam.play();
         window.requestAnimationFrame(loop);
@@ -53,13 +83,9 @@
         const prediction = await model.predict(webcam.canvas);
         const bestPrediction = getBestPrediction(prediction, 0.9);
         
-        if (bestPrediction != null) {
-            debugContainer.innerText = bestPrediction;
-            cardImage.src = "./images/" + bestPrediction + ".jpg";
-        } else {
-            debugContainer.innerText = "?";
-            cardImage.src = null;
-        }
+        valueMonitor.update(bestPrediction);
+        
+        debugContainer.innerText = valueMonitor.value + "\n" + valueMonitor.age();
     }
     
     function getBestPrediction(prediction, threshold) {
