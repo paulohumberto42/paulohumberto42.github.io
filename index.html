@@ -1,7 +1,7 @@
-<div>Teachable Machine Image Model</div>
+<div>v1</div>
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
-<div id="label-container"></div>
+<div id="debug-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 <script type="text/javascript">
@@ -11,7 +11,7 @@
     // the link to your model provided by Teachable Machine export panel
     const URL = "./my_model/";
 
-    let model, webcam, labelContainer, maxPredictions;
+    let model, webcam, debugContainer;
 
     // Load the image model and setup the webcam
     async function init() {
@@ -23,22 +23,20 @@
         // or files from your local hard drive
         // Note: the pose library adds "tmImage" object to your window (window.tmImage)
         model = await tmImage.load(modelURL, metadataURL);
-        maxPredictions = model.getTotalClasses();
 
         // Convenience function to setup a webcam
-        const flip = false; // whether to flip the webcam
-        webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+        //webcam = new tmImage.Webcam(200, 200, true); // width, height, flip
+        //await webcam.setup(); // request access to the webcam
+        
+        webcam = new tmImage.Webcam(200, 200, false); // width, height, flip
         await webcam.setup({ facingMode: "environment" })
-        await webcam.setup(); // request access to the webcam
+        
         await webcam.play();
         window.requestAnimationFrame(loop);
 
         // append elements to the DOM
         document.getElementById("webcam-container").appendChild(webcam.canvas);
-        labelContainer = document.getElementById("label-container");
-        for (let i = 0; i < maxPredictions; i++) { // and class labels
-            labelContainer.appendChild(document.createElement("div"));
-        }
+        debugContainer = document.getElementById("debug-container");
     }
 
     async function loop() {
@@ -47,19 +45,20 @@
         window.requestAnimationFrame(loop);
     }
 
-    // run the webcam image through the image model
     async function predict() {
-        // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
-        for (let i = 0; i < maxPredictions; i++) {
-            const className = prediction[i].className;
-            const probability = prediction[i].probability;
-            
-            labelContainer.childNodes[i].hidden = probability < 0.5;
-            
-            const classPrediction =
-                className + ": " + probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction;
+        const bestPrediction = getBestPrediction(prediction, 0.85);
+        debugContainer.innerText = bestPrediction;
+    }
+    
+    function getBestPrediction(prediction, threshold) {
+        for (let i = 0; i < prediction.length; i++) {
+        
+            if (prediction[i].probability >= threshold) {
+                return prediction[i].className;
+            }
         }
+        
+        return null;
     }
 </script>
