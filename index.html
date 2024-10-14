@@ -1,4 +1,4 @@
-<div>v8</div>
+<div>Categories</div>
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
 <div id="debug-container"></div>
@@ -40,7 +40,7 @@
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "./my_model/";
+    const URL = "./models/categories/";
 
     let model, webcam, cardImage, debugContainer;
     
@@ -86,10 +86,6 @@
         valueMonitor.update(bestPrediction);
         
         debugContainer.innerText = valueMonitor.value + "\n" + valueMonitor.age();
-        
-        if (valueMonitor.hasValue() && valueMonitor.age() > 1000) {
-            cardImage.src = "./images/" + valueMonitor.value + ".jpg";
-        }
     }
     
     function getBestPrediction(prediction, threshold) {
