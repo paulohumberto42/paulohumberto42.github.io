@@ -1,4 +1,4 @@
-<div>Categories</div>
+<div>Categories 75%</div>
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
 <div id="debug-container"></div>
@@ -81,18 +81,20 @@
 
     async function predict() {
         const prediction = await model.predict(webcam.canvas);
-        const bestPrediction = getBestPrediction(prediction, 0.9);
+        const bestPrediction = getBestPrediction(prediction, 0.75);
         
-        valueMonitor.update(bestPrediction);
+        valueMonitor.update(bestPrediction.className);
         
-        debugContainer.innerText = valueMonitor.value + "\n" + valueMonitor.age();
+        debugContainer.innerText = valueMonitor.value
+            + "\n" + valueMonitor.age()
+            + "\n" + bestPrediction.probability.toFixed(2);
     }
     
     function getBestPrediction(prediction, threshold) {
         for (let i = 0; i < prediction.length; i++) {
         
             if (prediction[i].probability >= threshold) {
-                return prediction[i].className;
+                return prediction[i];
             }
         }
         
