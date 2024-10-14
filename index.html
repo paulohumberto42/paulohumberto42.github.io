@@ -1,10 +1,9 @@
-<div>Categories 0.75</div>
+<div>Minion/Goblins</div>
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
 <div id="debug-container"></div>
-<div>
-    <img id="card-image" style="width:200px,height:200px" />
-</div>
+<img id="card-image"></img>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 <script type="text/javascript">
@@ -36,32 +35,73 @@
         }
     }
 
-    // More API functions here:
-    // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+    class Model {
+        _baseUrl = "";
+        _model = null;
+        _value = new ValueMonitor();
 
-    // the link to your model provided by Teachable Machine export panel
-    const URL = "./models/categories/";
+        constructor(baseUrl) {
+            this._baseUrl = baseUrl;
+        }
 
-    let model, webcam, cardImage, debugContainer;
-    
-    let valueMonitor = new ValueMonitor();
+        async load() {
+            const modelUrl = this._baseUrl + "model.json";
+            const metadataUrl = this._baseUrl + "metadata.json";
+            this._model = await tmImage.load(modelUrl, metadataUrl);
+        }
+
+        async predict(canvas, threshold) {
+            const prediction = await this._model.predict(canvas);
+
+            for (let i = 0; i < prediction.length; i++) {
+                if (prediction[i].probability >= threshold) {
+                    this._value.update(prediction[i].className);
+                    return prediction[i];
+                }
+            }
+            
+            this._value.update(null);
+            return null;
+        }
+
+        value() {
+            return this._value.value;
+        }
+
+        age() {
+            return this._value.age();
+        }
+
+        hasValue() {
+            return this._value.hasValue();
+        }
+    }
+
+    let webcam, isInit;
+    let debugContainer, cardImage;
+
+    let categoriesModel = new Model("./models/categories/");
+    let models = {
+        "minion": new Model("./models/minion/"),
+        "goblin": new Model("./models/goblin/"),
+    };
 
     // Load the image model and setup the webcam
     async function init() {
-        const modelURL = URL + "model.json";
-        const metadataURL = URL + "metadata.json";
 
-        // load the model and metadata
-        // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-        // or files from your local hard drive
-        // Note: the pose library adds "tmImage" object to your window (window.tmImage)
-        model = await tmImage.load(modelURL, metadataURL);
+        if (isInit) {
+            return;
+        }
 
-        // Convenience function to setup a webcam
-        //webcam = new tmImage.Webcam(200, 200, true); // width, height, flip
-        //await webcam.setup(); // request access to the webcam
-        
-        webcam = new tmImage.Webcam(200, 200, false); // width, height, flip
+        isInit = true;
+
+        await categoriesModel.load();
+
+        for (const prop in models) {
+            await models[prop].load();
+        }
+
+        webcam = new tmImage.Webcam(200, 200, false);
         await webcam.setup({ facingMode: "environment" })
         
         await webcam.play();
@@ -69,8 +109,9 @@
 
         // append elements to the DOM
         document.getElementById("webcam-container").appendChild(webcam.canvas);
-        cardImage = document.getElementById("card-image");
+
         debugContainer = document.getElementById("debug-container");
+        cardImage = document.getElementById("card-image");
     }
 
     async function loop() {
@@ -80,30 +121,34 @@
     }
 
     async function predict() {
-        const prediction = await model.predict(webcam.canvas);
-        const bestPrediction = getBestPrediction(prediction, 0.75);
-        
-        if (bestPrediction == null) {
+        let category, card;
+
+        let model = categoriesModel;
+        let bestPrediction = await model.predict(webcam.canvas, 0.75);
+
+        if (bestPrediction != null && models[bestPrediction.className] != null) {
+            category = bestPrediction.className;
+
+            model = models[bestPrediction.className];
+            bestPrediction = await model.predict(webcam.canvas, 0.75);
+
+            if (bestPrediction != null) {
+                card = bestPrediction.className;
+            }
+        }
+
+        if (!model.hasValue()) {
             debugContainer.innerText = "?"
-                + "\n" + valueMonitor.age();
+                + "\n" + model.age();
             return;
         }
 
-        valueMonitor.update(bestPrediction.className);
-        
-        debugContainer.innerText = valueMonitor.value
-            + "\n" + valueMonitor.age()
+        debugContainer.innerText = model.value()
+            + "\n" + model.age()
             + "\n" + bestPrediction.probability.toFixed(2);
-    }
-    
-    function getBestPrediction(prediction, threshold) {
-        for (let i = 0; i < prediction.length; i++) {
-        
-            if (prediction[i].probability >= threshold) {
-                return prediction[i];
-            }
+
+        if (card != null && model.age() > 1000) {
+            cardImage.src = "./images/" + card + ".jpg";
         }
-        
-        return null;
-    }
+    }   
 </script>
