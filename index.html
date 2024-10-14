@@ -1,4 +1,4 @@
-<div>Categories 75%</div>
+<div>Categories 0.75</div>
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
 <div id="debug-container"></div>
@@ -83,6 +83,12 @@
         const prediction = await model.predict(webcam.canvas);
         const bestPrediction = getBestPrediction(prediction, 0.75);
         
+        if (bestPrediction == null) {
+            debugContainer.innerText = "?"
+                + "\n" + valueMonitor.age();
+            return;
+        }
+
         valueMonitor.update(bestPrediction.className);
         
         debugContainer.innerText = valueMonitor.value
